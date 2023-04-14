@@ -1,0 +1,69 @@
+
+version: 2
+
+models:
+  - name: dim_funcionarios
+    description: Esta é a dimensão com os dados dos funcionarios
+    columns:
+      - name: sk_funcionario
+        description: Essa é a chave surrogate key da tabela.
+        tests:
+          - unique
+          - not_null
+
+      - name: id_funcionario
+        description: id unico que identifica o funcionario. 
+        tests:
+          - not_null
+          - unique
+
+      - name: id_gerente
+        description: id que indentifica a qual gerente o funcionario responde. 
+        
+      - name: funcionario
+        description: Nome e sobrenome do funcionario.
+        tests:
+          - not_null
+              
+      - name: gerente
+        description: Nome do gerente a quem o funcionario responde.
+      
+      - name: func_data_nascimento
+        description: Data de nascimento do funcionario, no formato 'ano-mes-dia'.
+        tests:
+          - not_null
+              
+      - name: func_data_contratacao
+        description: Data em que o funcionario foi contratado pela empresa, no formato 'ano-mes-dia'.
+        tests:
+          - not_null
+              
+      - name: func_endereco
+        description: Edereço em que mora o funcionario.
+        tests:
+          - not_null
+      
+      - name: func_cidade
+        description: Cidade em que o funcionario mora.
+        tests:
+          - not_null
+      
+      - name: func_regiao
+        description: Região em que o funcionario mora.
+      
+      - name: func_cep
+        description: Cep do endereço em que o funcionario mora.
+        tests:
+          - not_null
+      
+      - name: func_pais
+        description: Pais em que o funcionario mora.
+        tests:
+          - not_null
+
+      - name: func_notas
+        description: Observações sobre o funcionario.
+        
+
+        
+          
